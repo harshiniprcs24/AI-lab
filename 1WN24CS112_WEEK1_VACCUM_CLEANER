@@ -1,0 +1,39 @@
+roomA = input("Enter Room A status (Dirty/Clean): ")
+roomB = input("Enter Room B status (Dirty/Clean): ")
+location = input("Enter vacuum location (A/B): ")
+
+print("\n--- Vacuum Cleaner Agent ---")
+
+while roomA == "Dirty" or roomB == "Dirty":
+
+    if location == "A":
+        if roomA == "Dirty":
+            print("Room A is Dirty -> Suck")
+            roomA = "Clean"
+        else:
+            print("Room A is Clean -> Move Right")
+            location = "B"
+
+    else:
+        if roomB == "Dirty":
+            print("Room B is Dirty -> Suck")
+            roomB = "Clean"
+        else:
+            print("Room B is Clean -> Move Left")
+            location = "A"
+
+print("\nBoth rooms are Clean!")
+print("Goal Achieved!")
+
+output:
+Enter Room A status (Dirty/Clean): Dirty
+Enter Room B status (Dirty/Clean): Dirty
+Enter vacuum location (A/B): A
+
+--- Vacuum Cleaner Agent ---
+Room A is Dirty -> Suck
+Room A is Clean -> Move Right
+Room B is Dirty -> Suck
+
+Both rooms are Clean!
+Goal Achieved!
